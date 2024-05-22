@@ -1,0 +1,33 @@
+
+<div class="center">
+
+    <mat-card>
+        <mat-card-title>Bienvenido</mat-card-title>
+        <mat-card-content>
+            <form>
+                <mat-form-field>
+                    <mat-label>Usuario</mat-label>
+                    <input type="text" matInput >
+                    <mat-icon matSuffix>people</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Contraseña</mat-label>
+                    <input [type]="hide ? 'password' : 'text'" matInput>
+                    <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>
+                            {{hide ? 'visibility_off' : 'visibility'}}
+                        </mat-icon>
+                    </button>
+                </mat-form-field>
+                <p>
+                    Aqui mostrara error de autenticacion
+                </p>
+                <div class="btn">
+                    <button type="submit" mat-flat-button color="primary">Iniciar Sesión</button>
+                </div>
+                
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+</div>
